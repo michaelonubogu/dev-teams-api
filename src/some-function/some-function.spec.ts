@@ -6,13 +6,19 @@ describe('@azure-seed/azure-functions-typescript', () => {
     it('should be able to return a list of all items', () => {
       const mockContext: Context = {
         done: (err, response) => {
-          expect(err).toBeUndefined();
+          expect(err)
+            .toBeUndefined();
 
-          expect(response.status).toEqual(HttpStatusCode.OK);
-          expect(response.body).toHaveProperty('object');
-          expect(response.body).toHaveProperty('data');
-          expect(response.body).toHaveProperty('hasMore');
-          expect(response.body).toHaveProperty('totalCount');
+          expect(response.status)
+            .toEqual(HttpStatusCode.OK);
+          expect(response.body)
+            .toHaveProperty('object');
+          expect(response.body)
+            .toHaveProperty('data');
+          expect(response.body)
+            .toHaveProperty('hasMore');
+          expect(response.body)
+            .toHaveProperty('totalCount');
         }
       };
 
@@ -28,12 +34,17 @@ describe('@azure-seed/azure-functions-typescript', () => {
     it('should be able to return an item', () => {
       const mockContext: Context = {
         done: (err, response) => {
-          expect(err).toBeUndefined();
+          expect(err)
+            .toBeUndefined();
 
-          expect(response.status).toEqual(HttpStatusCode.OK);
-          expect(response.body).toHaveProperty('id');
-          expect(response.body).toHaveProperty('object');
-          expect(response.body).toHaveProperty('name');
+          expect(response.status)
+            .toEqual(HttpStatusCode.OK);
+          expect(response.body)
+            .toHaveProperty('id');
+          expect(response.body)
+            .toHaveProperty('object');
+          expect(response.body)
+            .toHaveProperty('name');
         }
       };
 
@@ -52,12 +63,17 @@ describe('@azure-seed/azure-functions-typescript', () => {
     it('should be able to create a new item', () => {
       const mockContext: Context = {
         done: (err, response) => {
-          expect(err).toBeUndefined();
+          expect(err)
+            .toBeUndefined();
 
-          expect(response.status).toEqual(HttpStatusCode.Created);
-          expect(response.body).toHaveProperty('id');
-          expect(response.body).toHaveProperty('object');
-          expect(response.body).toHaveProperty('name');
+          expect(response.status)
+            .toEqual(HttpStatusCode.Created);
+          expect(response.body)
+            .toHaveProperty('id');
+          expect(response.body)
+            .toHaveProperty('object');
+          expect(response.body)
+            .toHaveProperty('name');
         }
       };
 
@@ -75,12 +91,17 @@ describe('@azure-seed/azure-functions-typescript', () => {
     it('should be able to update an existing item', () => {
       const mockContext: Context = {
         done: (err, response) => {
-          expect(err).toBeUndefined();
+          expect(err)
+            .toBeUndefined();
 
-          expect(response.status).toEqual(HttpStatusCode.OK);
-          expect(response.body).toHaveProperty('id');
-          expect(response.body).toHaveProperty('object');
-          expect(response.body).toHaveProperty('name');
+          expect(response.status)
+            .toEqual(HttpStatusCode.OK);
+          expect(response.body)
+            .toHaveProperty('id');
+          expect(response.body)
+            .toHaveProperty('object');
+          expect(response.body)
+            .toHaveProperty('name');
         }
       };
 
@@ -101,11 +122,15 @@ describe('@azure-seed/azure-functions-typescript', () => {
     it('should be able to return success code using Http DELETE', () => {
       const mockContext: Context = {
         done: (err, response) => {
-          expect(err).toBeUndefined();
+          expect(err)
+            .toBeUndefined();
 
-          expect(response.status).toEqual(HttpStatusCode.OK);
-          expect(response.body).toHaveProperty('deleted');
-          expect(response.body).toHaveProperty('id');
+          expect(response.status)
+            .toEqual(HttpStatusCode.OK);
+          expect(response.body)
+            .toHaveProperty('deleted');
+          expect(response.body)
+            .toHaveProperty('id');
         }
       };
 
@@ -124,10 +149,13 @@ describe('@azure-seed/azure-functions-typescript', () => {
     it('should not return success code using any other Http method', () => {
       const mockContext: Context = {
         done: (err, response) => {
-          expect(err).toBeUndefined();
+          expect(err)
+            .toBeUndefined();
 
-          expect(response.status).toEqual(HttpStatusCode.MethodNotAllowed);
-          expect(response.body).toEqual({
+          expect(response.status)
+            .toEqual(HttpStatusCode.MethodNotAllowed);
+          expect(response.body)
+            .toEqual({
             error: {
               type: 'not_supported',
               message: 'Method XYZ not supported.'

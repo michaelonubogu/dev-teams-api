@@ -2,6 +2,8 @@
   "IsEncrypted": false,
   "Values": {
     "AzureWebJobsStorage": "",
-    "AzureWebJobsDashboard": ""
-  }
+    "AzureWebJobsDashboard": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node"
+  },
+  "ConnectionStrings": {}
 }
