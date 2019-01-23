@@ -13,6 +13,9 @@ node_modules/
 coverage/
 test-report.xml
 
+# settings
+src/secret.settings.json
+
 # misc
 npm-debug.log
 yarn-error.log
